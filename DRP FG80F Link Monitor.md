@@ -107,7 +107,7 @@ Switch to ISP2 when ISP1 fails using Fortigate Link Monitor
 
 ### Prerequisites
 
-⚠️ **Important**: Ensure the following before configuring:
+ **Important**: Ensure the following before configuring:
 
 1. Interfaces are **NOT** part of an SD-WAN
 2. No policies are interfering with failover behavior
@@ -144,37 +144,21 @@ Navigate to: **Network > Static Routes > New**
 **CLI:**
 
 ```
-
-\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*>get router info routing-table all    #Active routes\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*
+get router info routing-table all    #Active routes
 
 Routing table for VRF=0
 
-S\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*      0.0.0.0/0 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\[1/0] via 41.224.54.80, wan1, \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\[1/0]
-
+S*      0.0.0.0/0 [1/0] via 41.274.54.80, wan1, [1/0]
 C       41.224.54.80/31 is directly connected, wan1
-
 C       192.168.0.0/24 is directly connected, internal
-
 ```
-
-
-
 ```
-
-\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*>get router info routing-table database #all routes, \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*=Active\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*
-
-
-
+get router info routing-table database #all routes,=Active
 Routing table for VRF=0
-
-S\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*      0.0.0.0/0 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\[1/0] via 41.224.54.80, wan1, \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\[1/0]
-
+*      0.0.0.0/0 [1/0] via 41.224.54.80, wan1, [1/0]
 C       41.224.54.80/31 is directly connected, wan1
-
 C       169.254.2.1/32 is directly connected, VPN Tunnel
-
 C       192.168.0.0/24 is directly connected, internal
-
 ```
 
 
@@ -183,13 +167,9 @@ C       192.168.0.0/24 is directly connected, internal
 
 **Set up the Link Monitor:**
 
-
-
 To know how to setup the link monitor, think of the exact route you want to target using: Destination \[route] \& first hop \[Gateway] \& exit interface, and apply this in the CLI:
 
-
-
-**```**
+```
 
 config system link-monitor
 
@@ -221,13 +201,7 @@ diagnose sys link-monitor status
 
 ```
 
-
-
-
-
 **A huge problem that caused me ache**, is DNS, Yes DNS. because after almost being fired (jk) for saying the failover is functional (which it is) but the office lost internet (not really )TWICE since I started working on the Failover mechanism, which never happened, but only when the backup modem looses internet, otherwise the failover executes flawlessly.
-
-
 
 so what happened is: The FortiGate has "Override internal dns on wan2 (backup interface)", which means the it uses the wan2 modem's DNS server (modem's IP in this case) for all devices but wan1 doesn't have this option, so the modem with no internet's IP is now the DNS server of the Fortigate, thus of all LAN devices, which made it look like the internet is down for all the users.
 
