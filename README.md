@@ -8,7 +8,7 @@ This repository contains comprehensive documentation and configuration guides fo
 
 ## Contents
 
-### 📋 Fortinet FortiGate Documentation
+###  Fortinet FortiGate Documentation
 
 - **[FW-setup.md](FW-setup.md)** - Complete Fortinet FortiGate configuration guide covering:
   - Firewall features and WAN management
@@ -19,7 +19,7 @@ This repository contains comprehensive documentation and configuration guides fo
   - Routing and failover strategies
   - Licensing and advanced features
 
-### 🔄 Disaster Recovery Procedures
+###  Disaster Recovery Procedures
 
 - **[DRP FG80F Link Monitor.md](DRP%20FG80F%20Link%20Monitor.md)** - Link Monitor failover configuration for FG80F:
   - Setup for WAN failover between ISPs
@@ -27,7 +27,7 @@ This repository contains comprehensive documentation and configuration guides fo
   - Routing Table (FIB) vs Routing Database (RIB) concepts
   - Diagnostics and health check commands
 
-### 📊 Network Monitoring
+###  Network Monitoring
 
 - **[NAGIOS UBUNTU SETUP.md](NAGIOS%20UBUNTU%20SETUP.md)** - Step-by-step guide for setting up NAGIOS monitoring on Ubuntu:
   - SSH server installation
@@ -76,19 +76,6 @@ This repository contains comprehensive documentation and configuration guides fo
 
 - [Fortinet FortiGate Administration Guide v7.2.9](https://docs.fortinet.com/document/fortigate/7.2.9/administration-guide/954635/getting-started)
 - [FortiGate ZTNA Documentation v7.6.6](https://docs.fortinet.com/document/fortigate/7.6.6/administration-guide/855420/zero-trust-network-access-introduction)
-
-## Document Status
-
-All documentation has been formatted for GitHub and includes:
-- ✅ Structured markdown with proper headings
-- ✅ Code blocks with syntax highlighting
-- ✅ Tables for comparison and reference
-- ✅ Clear sections and navigation
-- ✅ Links to official resources
-
-## License
-
-This documentation is provided as-is for reference and educational purposes.
 
 ---
 
