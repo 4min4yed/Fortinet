@@ -137,7 +137,7 @@ Create a trigger for **System Reboot**:
 - **Log ID**: 32009 (`LOG_ID_SYSTEM_START`)
 - **Name**: "Reboot"
 
-> ⚠️ Note: Reboot triggers are better set as event log IDs because the system restarts before FortiGate can send the mail during a reboot.
+>  Note: Reboot triggers are better set as event log IDs because the system restarts before FortiGate can send the mail during a reboot.
 
 ---
 
@@ -257,7 +257,7 @@ Test SMTP server connection:
 
 ## Best Practices
 
-### ✅ Do's
+###  Do's
 
 - Enable 2FA before setting up O365/Gmail email alerts
 - Use **event log IDs** for triggers instead of immediate actions (more reliable)
@@ -265,7 +265,7 @@ Test SMTP server connection:
 - Set reasonable alert intervals (batch every 5 minutes vs instant)
 - Document which automations are active and why
 
-### ❌ Don'ts
+### Don'ts
 
 - Don't use regular passwords with Office365/Gmail - always use app passwords
 - Don't create overlapping automations that trigger simultaneously
