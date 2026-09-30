@@ -1,6 +1,6 @@
 # NAGIOS Ubuntu Setup Guide
 
-!()[https://media.licdn.com/dms/image/v2/D562DAQHhsWfjg6Xj0A/profile-treasury-image-shrink_1280_1280/B56Z0AZtPcGgAQ-/0/1773828281479?e=1791392400&v=beta&t=7iv723EvUNSc-aw21c-_CfQ-MxcrXy4_I-ZiIFtW2bk]
+![](https://media.licdn.com/dms/image/v2/D562DAQHhsWfjg6Xj0A/profile-treasury-image-shrink_1280_1280/B56Z0AZtPcGgAQ-/0/1773828281479?e=1791392400&v=beta&t=7iv723EvUNSc-aw21c-_CfQ-MxcrXy4_I-ZiIFtW2bk)
 
 ## Prerequisites
 
